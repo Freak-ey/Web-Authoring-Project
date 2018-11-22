@@ -5,11 +5,18 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
 	<body>
-		<div id="BoxRegion">
-			<img src="data/images/Spotify.png" draggable="false" class="DisableSelect" id="PrimaryImage">
-			<input type="text" placeholder="Username" class="TextField">
-			<input type="password" placeholder="Password" class="TextField">
-			<input type="submit" value="Log In" class="TextField Button" onclick="AnimateBoxRegion()">
+		<div class="ScreenContainer">
+			<div id="BoxRegion" class="VerticallyCentered">
+				<img src="data/images/Spotify.png" draggable="false" class="DisableSelect SpotifyLogo">
+				<!--svg xmlns="data/images/Spotify.svg" draggable="false" class="DisableSelect SpotifyLogo"-->
+				<input type="text" placeholder="Username" class="TextField">
+				<input type="password" placeholder="Password" class="TextField">
+				<input type="submit" value="Log In" class="TextField Button" onclick="Hide()">
+			</div>
+		</div>
+		
+		<div id="RadialMenu">
+			<img src="data/images/Spotify.png" draggable="false" class="DisableSelect SpotifyLogo VerticallyCentered">
 		</div>
 		
 		<video autoplay loop muted id="BackgroundVideo">
