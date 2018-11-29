@@ -1,6 +1,51 @@
+//http://jsfiddle.net/webtiki/MpXYr/2/embedded/result/
+
 body
 {
 	overflow: hidden;
+}
+
+#MusicMenu
+{
+	margin: 0 auto;
+	position:relative;
+	background-color: rgba(0, 0, 0, 0.15);
+	text-align: center;
+	width:85%;
+	height:85%;
+}
+
+.Square
+{
+	float:left;
+    position: relative;
+    width: 30%;
+    padding-bottom : 30%; /* = width for a 1:1 aspect ratio */
+    margin:1.66%;
+    background-color:#1E1E1E;
+    overflow:hidden;
+}
+
+.Content
+{
+	position:absolute;
+    height:90%; /* = 100% - 2*5% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 5%;
+}
+
+.Table
+{
+	display:table;
+    width:100%;
+    height:100%;
+}
+
+.Table-Cell
+{
+	position:relative;
+    display:table-cell;
+    vertical-align:middle;
 }
 
 #RadialMenu
