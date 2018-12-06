@@ -4,7 +4,12 @@
 		<link rel="stylesheet" type="text/css" href="reset.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>
+	<body>		
+		<video autoplay loop muted id="BackgroundVideo">
+			<source src="data/videos/concert.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+		
 		<div id="ScreenContainer" align="center">
 			<div id="BoxRegion" class="VerticallyCentered">
 				<img src="data/images/Spotify.svg" alt="Spotify Logo" draggable="false" class="DisableSelect SpotifyLogo">
@@ -18,21 +23,16 @@
 			</div>
 			
 			<div id="MusicMenu" class="VerticallyCentered">
-				<div class="Square"> 
-				  <div class="content">
-					<div class="table">
-						<div class="table-cell">
-							<img src="data/images/albums/Agents of Fortune.jpg">
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>	
-		
-		<video autoplay loop muted id="BackgroundVideo">
-			<source src="data/videos/concert.mp4" type="video/mp4">
-			Your browser does not support the video tag.
-		</video>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+				<div class="GridSquare" style="background-image: url('');"></div>
+			</div>	
+		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="scripts.js"></script>
