@@ -11,18 +11,22 @@ body
 	position:relative;
 	background-color: rgba(0, 0, 0, 0.15);
 	text-align: center;
-	width:85%;
-	height:85%;
+	width:85vw;
+	height:85vh;
 	overflow:hidden;
+}
+
+.ScrollableField
+{
+	width:85vw;
+	height:85vh;
 }
 
 .GridSquare
 {
 	float: left;
     position: relative;
-    width: 49%;
-	padding-bottom:49%;
-    //background-color:#1E1E1E;
+    background-color:#1E1E1E;
 	
 	margin:0.5%;
 	transition: transform 1s;
@@ -35,8 +39,8 @@ body
 .CardFront
 {
 	position:relative;
-	height: 100%;
 	background-color:DodgerBlue;
+	width: 100%;
 }
 
 .CardBack
@@ -60,8 +64,8 @@ body
 	position:relative;
 	background-color: rgba(0, 0, 0, 0.15);
 	text-align: center;
-	width:65%;
-	height:70%;
+	width:65vw;
+	height:70vh;
 }
 
 #RadialMenu .SpotifyLogo
@@ -74,8 +78,8 @@ body
 {
 	margin: 0 auto;
 	position:relative;
-	width:65%;
-	height:70%;
+	width:65vw;
+	height:70vh;
 	background-color: rgba(0, 0, 0, 0.15);
     border-radius: 50px;
 	backdrop-filter: url(filters.svg#filter) blur(5px);
@@ -85,16 +89,16 @@ body
 #BoxRegion .SpotifyLogo
 {
 	position: relative;
-	width: 25%;
-	top: -15%;
+	width: 25vw;
+	top: -15vh;
 }
 
 #ScreenContainer
 {
 	text-align: center;
 	position:absolute;
-	width: 100%;
-	height: 100%;
+	width: 100vw;
+	height: 100vh;
 }
 
 .TextField
@@ -116,7 +120,6 @@ body
 	margin-top:5%;
 	transition: 1s;
 	outline:none;
-	//font-family: Futura, "futura-pt";
 }
 
 .Button:hover
@@ -139,7 +142,7 @@ body
 {
   margin: 0;
   position: absolute;
-  top: 50%;
+  top: 50vh;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
 }
