@@ -30,6 +30,13 @@ function init()
 	});​
 	*/
 	
+	var numPerColumn = 6;
+	var num = 18;
+	var scale = (100 / numPerColumn) - 1;
+	
+	var musicMenu = $("#MusicMenu");
+	for(var i = 0; i < num; i++)
+		musicMenu.append("<div class='GridSquare'></div>");	
 	
 	$('.GridSquare').each(function()
 	{
@@ -40,20 +47,21 @@ function init()
 		{
 			case 0:
 				url += "Agents of Fortune"
-				console.log("Fortune");
 				break;
 			case 1:
 				url += "Back in Black"
-				console.log("Back in Black");
 				break;
 			case 2:
 				url += "Fire of Unknown Origin"
-				console.log("Fire of Unknown Origin");
 				break;
 		}
 		url += ".jpg";
-		console.log(url);
-		$(this).css('background-image', 'url("' + url + '")'); 
+		//$(this).css('background-image', 'url("' + url + '")');
+		$(this).width(scale + "%");
+		$(this).css('paddingBottom', scale + "%");
+		
+		$(this).append("<div class='CardFront'> </div>");	
+		$(this).append("<div class='CardBack'> </div>"); //style='background-image: url(" + '"' + url + '"' + ")
 	});
 }
 
