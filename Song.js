@@ -16,8 +16,8 @@ var builtInSongList =
 
 var builtInPlaylists = [];
 
-builtInPlaylists.push(new Playlist("Back In Black", "data/images/albums/Back In Black.jpg", 0, 5 ));
-builtInPlaylists.push(new Playlist("Blue Oyster Cult", "data/images/albums/Fire Of Unknown Origin.jpg", 6, 7 ));
+builtInPlaylists.push(new Playlist("Back In Black", "data/images/albums/Back in Black.jpg", 0, 5 ));
+builtInPlaylists.push(new Playlist("Blue Oyster Cult", "data/images/albums/Fire of Unknown Origin.jpg", 6, 7 ));
 
 //Contains helper functions for songs and playlists
 function Song(name, url)
