@@ -1,35 +1,62 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
+		<meta charset="utf-8"/>
 		<link rel="stylesheet" type="text/css" href="reset.css">
 		<link rel="stylesheet" type="text/css" href="style.css">
 	</head>
-	<body>		
-		<video autoplay loop muted id="BackgroundVideo">
+	<body>
+		<video autoplay loop muted id="BackgroundVideo" class="DisableSelect">
 			<source src="data/videos/concert.mp4" type="video/mp4">
 			Your browser does not support the video tag.
 		</video>
 		
-		<div id="ScreenContainer" align="center">
-			<div id="BoxRegion" class="VerticallyCentered">
+		<div id="LoginMenu" class="ScreenContainer ">
+			<div class="AbsoluteCentered BoxRegion">
 				<img src="data/images/Spotify.svg" alt="Spotify Logo" draggable="false" class="DisableSelect SpotifyLogo">
 				<input type="text" placeholder="Username" class="TextField">
 				<input type="password" placeholder="Password" class="TextField">
-				<input type="submit" value="Log In" class="TextField Button" onclick="Hide()">
+				<input type="submit" value="Log In" class="TextField Button DisableSelect" onclick="ChangeMenu(1)">				
 			</div>
 			
+			<div class="BottomBar">
+				<p class="BottomText" onclick="ChangeMenu(1)"> Load Site Without Spotify API </p>
+			</div>
+		</div>
+			
+			<!--
 			<div id="RadialMenu" class="VerticallyCentered">
 				<img src="data/images/Spotify.svg" draggable="false" class="DisableSelect SpotifyLogo VerticallyCentered">
 			</div>
+			-->
 			
-			<div id="MusicMenu" class="VerticallyCentered">
-				<div class="ScrollableField">
-					
+		<div id="MusicMenu" class="ScreenContainer">
+			<div class="MusicList AbsoluteCentered Scrollable">
+					<div class="GridSquare" id="CreatePlaylist" onclick="CreateNewPlaylist()">
+						<img src="data/images/NewPlaylistButton.svg" draggable="false" id="CreatePlaylistImage" class="DisableSelect">
+					</div>
+			</div>
+			
+			<div id="MusicPlayerContainer">
+				<div class="MusicPlayer">
+					<div id="BarContainer">					
+						<div id="ProgressBar">
+							<div id="BarSlider">
+							
+							</div>
+						</div>
+					</div>
+					<img src="data/images/SkipButton.svg" draggable="false" id="SkipBack" class = "MusicPlayerButton DisableSelect" onclick="SkipToPrevious()">
+					<img src="data/images/PauseButton.svg" draggable="false" id="PauseButton" class = "MusicPlayerButton DisableSelect" onclick="ToggleSong()">
+					<img src="data/images/SkipButton.svg" draggable="false" class = "MusicPlayerButton DisableSelect" onclick="SkipToNext()">
+					<p id="MusicDuration"> 0:00/0:00 </p>
 				</div>
-			</div>	
+			</div>
 		</div>
 	</body>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="jquery.mousewheel.js"></script>
-	<script src="scripts.js"></script>
+	<script src="Song.js"></script>
+	<script src="MusicPlayer.js"></script>
+	<script src="PlaylistManager.js"></script>
+	<script src="MenuTransitions.js"></script>
 </html>
